@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import './index.css';
+import AppRoutes from 'routes';
+import FavoritosProvider from 'contextos/Favoritos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <FavoritosProvider>
+      <AppRoutes />
+    </FavoritosProvider>
   </React.StrictMode>
 );
 
